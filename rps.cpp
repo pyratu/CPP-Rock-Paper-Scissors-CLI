@@ -32,8 +32,27 @@ int main()
         }
 
         int aiChoice = rand() % 3 + 1;
+        string aiChoiceText = "";
+        switch(aiChoice)
+        {
+            case 1:
+            {
+                aiChoiceText = "rock";
+                break;
+            }
+            case 2:
+            {
+                aiChoiceText = "paper";
+                break;
+            }
+            case 3:
+            {
+                aiChoiceText = "scissors";
+                break;
+            }
+        }
         string winner = ChooseWinner(userChoice, aiChoice);
-        cout << "Round ended. " << winner << endl
+        cout << "Round ended. Ai choose "<< aiChoiceText<<" " << winner << endl
              << endl;
     } while (userChoice != 4);
 }
